@@ -2,7 +2,11 @@
   "config": {
     "title": "Tradespace Analysis",
     "x-title": "x-axis Title",
-    "y-title": "y-axis Title"
+    "y-title": "y-axis Title",
+    "tooltip": {
+      "type": "string",
+      "role": "tooltip"
+    }
   },
   "data": {
     "headers": [{
@@ -13,18 +17,18 @@
       "value": "y Values"
     }],
     "values": [
-      [8, 12],
-      [8, 12],
-      [8, 12],
-      [8, 12],
-      [4, 5.5],
-      [11, 14],
-      [4, 5],
-      [3, 3.5],
-      [6.5, 7],
-      [15, 17.5],
-      [10, 2.5],
-      [12, 2.5]
+      [8, 12, "point-1-tooltip"],
+      [8, 12, "point-2-tooltip"],
+      [8, 12, "point-3-tooltip"],
+      [8, 12, "point-4-tooltip"],
+      [4, 5.5, "point-5-tooltip"],
+      [11, 14, "point-6-tooltip"],
+      [4, 5, "point-7-tooltip"],
+      [3, 3.5, "point-8-tooltip"],
+      [6.5, 7, "point-9-tooltip"],
+      [15, 17.5, "point-10-tooltip"],
+      [10, 2.5, "point-11-tooltip"],
+      [12, 2.5, "point-12-tooltip"]
     ]
   }
 }

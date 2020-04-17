@@ -27,6 +27,8 @@
         // chartData.data.headers.forEach((header) => {
         data.addColumn(header.type, header.value);
       }
+      if (chartData.config.tooltip)
+        data.addColumn(chartData.config.tooltip);
       data.addRows(chartData.data.values);
 
       var options = {
