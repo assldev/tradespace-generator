@@ -24,11 +24,12 @@
       var data = new google.visualization.DataTable();
       for (var i = 0; i < chartData.data.headers.length; i++) {
         var header = chartData.data.headers[i];
-        // chartData.data.headers.forEach((header) => {
         data.addColumn(header.type, header.value);
       }
       if (chartData.config.tooltip)
         data.addColumn(chartData.config.tooltip);
+      if (chartData.config.pointStyle)
+        data.addColumn(chartData.config.pointStyle);
       data.addRows(chartData.data.values);
 
       var options = {
@@ -48,8 +49,6 @@
           stroke: "#d6c0b1",
           strokeWidth: "5"
         },
-        pointShape: "triangle",
-        pointSize: 10,
         tooltip: {
           textStyle: {
             color: "#37423b",
@@ -69,8 +68,9 @@
         },
       };
 
+      // var chart = new google.charts.Scatter(document.getElementById('chart_div'));
+      // chart.draw(data, google.charts.Scatter.convertOptions(options));
       var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-
       chart.draw(data, options);
     }
   </script>
